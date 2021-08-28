@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import TextField, { Input} from '@material/react-text-field';
 import MaterialIcon from '@material/react-material-icon';
 
-import logo from '../../assets/logo-resized.svg';
+import logo from '../../assets/logo1.svg';
 
 import { Container, Search, Logo, Wrapper, Map} from './styles'
 
