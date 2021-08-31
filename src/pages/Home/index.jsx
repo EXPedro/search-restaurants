@@ -5,6 +5,7 @@ import MaterialIcon from '@material/react-material-icon';
 
 import logo from '../../assets/logo1.svg';
 import restaurante from '../../assets/restaurante-fake.png';
+import { Card } from '../../components';
 
 import { Container, Search, Logo, Wrapper, Map, CarouselTitle} from './styles'
 
@@ -34,18 +35,14 @@ const Home= () => {
                     </TextField>
                     <CarouselTitle>Na sua área</CarouselTitle>
                     <Slider {...settings}>
-                        <div>
-                            <img src= {restaurante} />
-                        </div>
-                        <div>
-                            <img src= {restaurante} />
-                        </div>
-                        <div>
-                            <img src= {restaurante} />
-                        </div>
-                        <div>
-                            <img src= {restaurante} />
-                        </div>
+                        <Card photo= { restaurante} />
+                        <Card photo= { restaurante} />
+                        <Card photo= { restaurante} />
+                        <Card photo= { restaurante} />
+                        <Card photo= { restaurante} />
+                        <Card photo= { restaurante} />
+                        <Card photo= { restaurante} />
+                        <Card photo= { restaurante} />
                     </Slider>
                 </Search>
             </Container>
