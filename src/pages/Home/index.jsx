@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import Slider from 'react-slick';
 import TextField, { Input} from '@material/react-text-field';
 import MaterialIcon from '@material/react-material-icon';
 
@@ -7,7 +6,7 @@ import logo from '../../assets/logo1.svg';
 import restaurante from '../../assets/restaurante-fake.png';
 import { Card } from '../../components';
 
-import { Container, Search, Logo, Wrapper, Map, CarouselTitle} from './styles'
+import { Container, Carousel, Search, Logo, Wrapper, Map, CarouselTitle} from './styles'
 
 const Home= () => {
     const [inputValue, setInputValue]= useState('');
@@ -34,16 +33,15 @@ const Home= () => {
                             onChange= {(e)=> setInputValue({value: e.currentTarget.value})} />
                     </TextField>
                     <CarouselTitle>Na sua área</CarouselTitle>
-                    <Slider {...settings}>
-                        <Card photo= { restaurante} />
-                        <Card photo= { restaurante} />
-                        <Card photo= { restaurante} />
-                        <Card photo= { restaurante} />
-                        <Card photo= { restaurante} />
-                        <Card photo= { restaurante} />
-                        <Card photo= { restaurante} />
-                        <Card photo= { restaurante} />
-                    </Slider>
+                    <Carousel {...settings}>
+                        <Card photo= { restaurante} title= "nome sei lá" />
+                        <Card photo= { restaurante} title= "nome sei lá" />
+                        <Card photo= { restaurante} title= "nome sei lá" />
+                        <Card photo= { restaurante} title= "nome sei lá" />
+                        <Card photo= { restaurante} title= "nome sei lá" />
+                        <Card photo= { restaurante} title= "nome sei lá" />
+                        <Card photo= { restaurante} title= "nome sei lá" />
+                    </Carousel>
                 </Search>
             </Container>
             <Map />
