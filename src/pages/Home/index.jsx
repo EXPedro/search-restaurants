@@ -4,12 +4,13 @@ import MaterialIcon from '@material/react-material-icon';
 
 import logo from '../../assets/logo1.svg';
 import restaurante from '../../assets/restaurante-fake.png';
-import { Card, RestaurantCard } from '../../components';
+import { Card, RestaurantCard, Modal } from '../../components';
 
 import { Container, Carousel, Search, Logo, Wrapper, Map, CarouselTitle} from './styles'
 
 const Home= () => {
     const [inputValue, setInputValue]= useState('');
+    const [modalOpened, setModalOpened]= useState(true);
     const settings = {
         dots: false,
         infinite: true,
@@ -27,11 +28,11 @@ const Home= () => {
                     <TextField
                         label= 'Pesquisar Restaurante'
                         outlined
-                        trailingIcon= {<MaterialIcon role = "button" icon = "search"/>}
+                        trailingIcon= {<MaterialIcon role = "button" icon = "search" />}
                         >
                         <Input
                             value= {inputValue}
-                            onChange= {(e)=> setInputValue({value: e.currentTarget.value})} />
+                            onChange= {(e)=> setInputValue({value: e.target.value})} />
                     </TextField>
                     <CarouselTitle>Na sua área</CarouselTitle>
                     <Carousel {...settings}>
@@ -47,6 +48,7 @@ const Home= () => {
                 <RestaurantCard />
             </Container>
             <Map />
+            <Modal open={modalOpened} onClose={() => setModalOpened(!modalOpened)} />
         </Wrapper>
     )
 };
