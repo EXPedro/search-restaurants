@@ -12,7 +12,7 @@ import { Container, Carousel, Search, Logo, Wrapper, CarouselTitle} from './styl
 const Home= () => {
     const [inputValue, setInputValue]= useState('');
     const [query, setQuery] = useState(null);
-    const [modalOpened, setModalOpened]= useState(true);
+    const [modalOpened, setModalOpened]= useState(false);
     const { restaurants, restaurantSelected  } = useSelector((state) => state.restaurants);
 
     const settings = {
