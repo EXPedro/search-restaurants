@@ -4,7 +4,7 @@
 
 :atom_symbol: Site desenvolvido usando __React.JS__
 
-## Para rodar o servidor de desenvolvimento: No diretório do projeto, rodar
+## Para rodar o servidor de desenvolvimento, no diretório do projeto
 
 ```$ yarn start```
 
